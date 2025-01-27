@@ -1,0 +1,138 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-top: 20px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8), 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
+    }
+    100% {
+        text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8), 0 0 15px #00d4ff, 0 0 30px #00d4ff, 0 0 45px #00d4ff;
+    }
+}
+
+/* Main Layout */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Choice Buttons */
+.cont {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.choice {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.4s, box-shadow 0.4s;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.choice:hover {
+    transform: scale(1.25);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.5), 0 0 15px #00ffcc;
+    border-color: #00ffcc;
+}
+
+.choice img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.8));
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.score p {
+    margin: 5px 0;
+}
+
+#user-sc, #comp-sc {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6b6b;
+    text-shadow: 0 0 10px #ff6b6b, 0 0 20px #ff6b6b;
+}
+
+/* Result Message */
+.result {
+    margin: 20px 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#msg {
+    padding: 15px 25px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .choice {
+        width: 90px;
+        height: 90px;
+    }
+
+    .scoreboard {
+        gap: 30px;
+        font-size: 1.2rem;
+    }
+
+    .result {
+        font-size: 1.5rem;
+    }
+}
