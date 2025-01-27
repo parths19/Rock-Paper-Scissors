@@ -26,13 +26,13 @@ RockPaperScissors/
 └── README.md        # Project documentation
 ```
 
-##🎮 How to Play
+## 🎮 How to Play
 - Choose Rock, Paper, or Scissors by clicking on the respective button.
 - The computer will make its choice randomly.
 - The result of the round will be displayed (Win, Lose, or Draw).
 - Your score and the computer's score will be updated accordingly.
 
-##🌟 Future Enhancements
+## 🌟 Future Enhancements
 - Add difficulty levels.
 - Include sound effects for player actions.
 - Add animations for a more dynamic experience.
